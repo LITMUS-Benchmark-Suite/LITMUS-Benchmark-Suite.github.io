@@ -5,7 +5,7 @@
 4. Javascript in the js folder.
 5. Css in the css folder.
 
-##[Start Bootstrap](http://startbootstrap.com/) - [Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/)
+## [Start Bootstrap](http://startbootstrap.com/) - [Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/)
 
 [Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/) is a basic business website template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
@@ -36,7 +36,7 @@ Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https:/
 
 ## To add more sections in the page
 1. Add the content (the id of the container is test in this case)
-       <div class="container-fluid bg-2 text-center" id="test" >
+       <!--<div class="container-fluid bg-2 text-center" id="test" >
          <h2>header text</h2>
          <br>
          Contents
@@ -47,11 +47,11 @@ Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https:/
             </p>
             <br>
          </div>
-      </div>
+      </div> -->
 
 2. Creating corresponding placeholder in the navbar, link by the id of the contents(test in this case)
-<li>
+<!--<li>
     <a href="#test">Test</a>
-</li>
+</li>-->
 
 
