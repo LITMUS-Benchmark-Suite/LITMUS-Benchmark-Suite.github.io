@@ -1,159 +1,351 @@
 <!DOCTYPE html>
+
 <html lang="en">
+   <link rel="icon" 
+      type="image/png" 
+      href="images/favicon1.png">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+      
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+      
+            // Store hash
+            var hash = this.hash;
+      
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+         
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+   </script>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>LITMUS Benchmark Suite</title>
+      <!-- Bootstrap Core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom CSS -->
+      <link href="css/business-frontpage.css" rel="stylesheet">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>LITMUS Benchmark Suite</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/business-frontpage.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+      <!-- Navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top nav-back"  role="navigation">
+         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <img src="images/litmus_logo.png" alt="Litmus benchmark logo" class="navbar-brand" style= "padding:10px;"></img>
+               <a href="#home" class="navbar-brand">LITMUS</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-		    <li>
-                        <a href="#">Publications</a>
-                    </li>
-                    <li>
-                        <a href="#">Downloads</a>
-                    </li>
-                    <li>
-                        <a href="#">Team</a>
-                    </li>
-                </ul>
+               <ul class="nav navbar-nav">
+                  <li>
+                     <!-- For any more links just add a li element and add the id of the element in the href atrribute-->
+                     <a href="#about">About</a>
+                  </li>
+                  <li>
+                     <a href="#publications">Publications & Software</a>
+                  </li>
+                  <li>
+                     <a href="#team">Team</a>
+                  </li>
+                  <li>
+                     <a href="#contact">Contact</a>
+                  </li>
+               </ul>
             </div>
             <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Image Background Page Header -->
-    <!-- Note: The background image is set within the business-casual.css file. -->
-    <header class="business-header">
-        <div class="container">
+         </div>
+         <!-- /.container -->
+      </nav>
+      <!-- Image Background Page Header -->
+      <!-- Note: The background image is set within the business-casual.css file. -->
+      <header id="home">
+         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="tagline"></h1>
-                </div>
+               <div class="col-lg-12">
+                  <!-- Business header-->
+                  <img src="images/litmus_back.png" alt="Litmus benchmark logo"  class="business-header img-responsive"></img>
+                  <h1 class="tagline"></h1>
+               </div>
             </div>
-        </div>
-    </header>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <hr>
-
-        <div class="row">
-            <div class="col-sm-8">
-                <h2>What We Do</h2>
-                <p>LITMUS Benchmark Suite, is an open extensible framework for benchmarking a plethora of cross-domain DMSs. We will not only automate the tedious benchmarking process, but also offer: </p>
-                <ul>
-                	<li>An efficient way for replicating existing benchmarks (e.g., BSBM, WAT-DIV),  </li>
-                	<li>A wide set of performance evaluation measures/indicators tailored specifically for needs and;  </li>
-                	<li>Present a custom visualization via custom charts, graphs and tabular data of the benchmark results for a faster insight.</li>
-
-                </ul>
-
-                <p>
-                    <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
-                </p>
+         </div>
+      </header>
+      <!-- bg-2 class in business-frontpage.css to make the background grey-->
+      <!-- To add more sections like what we do add
+       <div class="container-fluid bg-2 text-center" >
+         <h2>header text</h2>
+         <br>
+         Contents
+         <div class="text-center">
+            <p>
+                  Any links
+                     <a class="btn btn-default btn-lg" href="https://hub.docker.com/r/litmusbenchmarksuite/litmus/">Call to Action &raquo;</a>
+            </p>
+            <br>
+         </div>
+      </div>-->
+      <div class="container-fluid bg-2 text-center" >
+         <h2>What We Do</h2>
+         <br>
+         <p>LITMUS Benchmark Suite, is an open extensible framework for benchmarking a plethora of cross-domain DMSs.<br> We will not only automate the tedious benchmarking process but also offer: </p>
+         <p>An efficient way for replicating existing benchmarks (e.g., BSBM, WAT-DIV).  </p>
+         <p>A wide set of performance evaluation measures/indicators tailored specifically for needs and.  </p>
+         <p>Present a custom visualization via custom charts, graphs and tabular data of the benchmark results for a faster insight.</p>
+         <br>
+         <div class="text-center">
+            <p>
+               <!-- Link for call to action -->
+               <a class="btn btn-default btn-lg" href="https://hub.docker.com/r/litmusbenchmarksuite/litmus/">Call to Action &raquo;</a>
+            </p>
+            <br>
+         </div>
+      </div>
+      <div class="container-fluid bg-3 text-center" id="about">
+         <h2>About</h2>
+         <div class="row content-block text-justify" style="display: block;">
+            <!-- <div class="col-sm-2 col-sm-offset-2 text-center">
+               <img src="images/man.png" alt="man icon">
+               </div>-->
+            <h3 class="text-center">Inception</h3>
+            <div class="col-sm-12 col-md-12 text-left">
+               <p>Developments in the context of Open, Big, and Linked Data have led to an enormous growth of structured data on the Web. </p>
+               <p>To keep up with the pace of efficient consumption and management of the data at this rate, many Data Management Solutions have been developed.</p>
+               <p>There exists many efforts for benchmarking these domain specific DMSs, however, <br>(i) reproducing these third party benchmarks is an extremely tedious task, and<br> (ii) there is a lack of a common framework which enables and advocates the extensibility and reusability of the benchmarks.</p>
+               <p>LITMUS will go beyond classical storage benchmarking frameworks by allowing for analysing the performance of DMSs across query languages.</p>
+               <br> <br>
             </div>
-            <div class="col-sm-4">
-                <h2>Contact Us</h2>
-                <address>
-                    <strong>Harsh Thakkar</strong>
-                    <br>A110, Informatik III, University of Bonn
-                    <br>Roemerstrasse 164, 53117 Bonn, Germany
-                    <br>
-                </address>
-                <address>
-                    <abbr title="Phone">P:</abbr>(+49)-151-4550-1359
-                    <br>
-                    <abbr title="Email">E:</abbr> <a href="mailto:#">hthakkar@uni-bonn.de</a>
-                </address>
+         </div>
+         <div class="row content-block text-justify  bg-2" style="display: block;">
+            <!-- <div class="col-sm-2 col-sm-offset-2 text-center">
+               <img src="images/man.png" alt="man icon">
+               </div>-->
+            <h3 class="text-center">Focus</h3>
+            <div class="col-sm-12 col-md-12 text-left">
+               <p>The focus of LITMUS is to bridge the gaps in adopting, deploying and scaling the consumption of Linked Data. LITMUS thrives on simplifying the use, assessment and the performance analysis of a wide spectrum of cross-domain DMSs.</p>
+               <p>In particular, the LITMUS framework will:<br>
+               <p class="text-left">
+               <ul class="text-left">
+                  <li><b>Enable</b> a common platform for benchmarking and comparing a plethora of cross-domain DMSs, and reproducing existing third-party benchmarks.<br></li>
+                  <li><b>Create</b> interoperable machine-readable evaluation reports and scientific studies on the correlation of a variety of factors (such as query typology, data structures used for indexing, etc.) with respect to the performance of DMSs.<br></li>
+                  <li><b>Recommends</b> particular DMSs and benchmarks based on a set of requirements predefined by the user.</li>
+               </ul>
+               </p><br><br>
             </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <div class="row">
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://harshthakkar.in/wp-content/uploads/2016/08/dc.jpg" alt="">
-                <h2>All-in-One data convertor</h2>
-                <p>Convert RDF to a wide range of data representation formats</p>
+         </div>
+         <div class="row content-block text-justify" style="display: block;">
+            <!-- <div class="col-sm-2 col-sm-offset-2 text-center">
+               <img src="images/man.png" alt="man icon">
+               </div>-->
+            <div class="col-sm-12 col-md-12 text-left">
+               <h3 class="text-center">Architecture</h3>
+               <div class="col-sm-12 col-md-12">
+                  <img src="images/architecture.png" alt="Litmus architecture" class="img-responsive img-center"></img>
+                  <br> <br>
+               </div>
             </div>
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://harshthakkar.in/wp-content/uploads/2016/07/aio_query.png" alt="">
-                <h2>State-of-the-art query translator</h2>
-                <p>Convert SPARQL to Graph, SQL, and various other query formats automatically</p>
+            <div class="col-sm-12 col-md-12 text-left bg-2">
+               <h3 class="text-center">Outcomes</h3>
+               <div class="col-sm-12 col-md-12 text-left">
+                  <h4 class="text-center">Scientific Papers</h4>
+                  <p class="text-left">
+                  <ul class="text-left">
+                     <li><b>Various</b> RDF data representation formats and their conversion complexity, addressing challenges. <b>[C1]</b><br></li>
+                     <li><b>Query</b> language expressivity and supported features striving to address the language barrier <b>[C2]</b>. These studies will provide us with deep insights about the functionality of various query languages, RDF data formats, their strengths and limitations.<br></li>
+                     <li><b>An exhaustive</b> exploratory study on the selection of performance measures for evaluating cross-domain DMSs, addressing challenges. <b>[C3]</b></li>
+                  </ul>
+                  </p>
+               </div>
+               <br>
+               <br>
+               <div class="col-sm-12 col-md-12 text-left">
+                  <h4 class="text-center">Software</h4>
+                  <div class="row">
+                     <div class="col-sm-4 col-md-4">
+                        <div class="text-center">
+                           <img src="http://harshthakkar.in/wp-content/uploads/2016/08/dc.jpg" class="img-circle img-responsive img-center" width="200" height="200">
+                           <div class="caption">
+                              <h4>RDF TO PG CONVERTER</h4>
+                              <p>A novel data converter of RDF data to multiple data formats (such as CSV, JSON, SQL, etc.), providing compatible data as input to the cross-domain DMSs.</p>
+                              <p><a class="btn btn-default" style="background" href="https://github.com/LITMUS-Benchmark-Suite/dbpedia-graph-convertor">Take me there &raquo;</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-4 col-md-4">
+                        <div class="text-center">
+                           <img src="http://harshthakkar.in/wp-content/uploads/2016/07/aio_query.png" class="img-circle img-responsive img-center" width="200" height="200">
+                           <div class="caption">
+                              <h4>GREMNILATOR</h4>
+                              <p>A novel query translator for the automatic conversion of SPARQL to DMS-specific query language (e.g., Gremlinator,  etc), enabling compatible query input for cross-domain DMSs.</p>
+                              <p><a class="btn btn-default" style="background" href="https://github.com/LITMUS-Benchmark-Suite/sparql-to-gremlin">Take me there &raquo;</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-4 col-md-4">
+                        <div class="text-center">
+                           <img src="http://harshthakkar.in/wp-content/uploads/2016/08/rsz_tools.jpg" class="img-circle img-responsive img-center" width="200" height="200">
+                           <div class="caption">
+                              <h4>LITMUS DOCKER</h4>
+                              <p>An open, extensible benchmarking platform, for cross-domain DMS performance evaluation and easy replication of existing benchmarks.</p>
+                              <p><a class="btn btn-default" style="background" href="https://github.com/LITMUS-Benchmark-Suite/litmus-docker">Take me there &raquo;</a>
+                                 <a class="btn btn-default" style="background" href="https://hub.docker.com/r/litmusbenchmarksuite/litmus/">DockerHub &raquo;</a>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <br><br>
+               </div>
             </div>
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://harshthakkar.in/wp-content/uploads/2016/08/rsz_tools.jpg" alt="">
-                <h2>Compare a wide variety of Data Management Systems</h2>
-                <p>Diagonal comparison of diverse DMSs</p>
+         </div>
+      </div>
+      <div class="container-fluid bg-3" id="publications">
+         <br><br>
+         <h2 class="text-center">Publications And Software</h2>
+         <!-- Placeholder for publications and Software-->
+      </div>
+      <div class="container-fluid bg-3" id="team">
+         <br><br>
+         <h2 class="text-center">Our Team</h2>
+         <br>
+         <div class="row">
+            <div class="col-lg-3 col-sm-6  col-md-3 text-center">
+               <img class="img-circle img-responsive img-center" src="http://harshthakkar.in/wp-content/uploads/2009/12/Harsh.jpg" alt="" style="width:200px;height:200px;">
+               <h3>Harsh Thakkar
+                  <small>Researcher</small>
+               </h3>
+               <p>Full-time researcher at Informatik III department of University of Bonn, Germany.</p>
+               <p><a href="https://www.linkedin.com/in/thakkarharsh?ppe=1" class="btn btn-primary" role="button">LinkedIn</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Website</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Email</a> </p>
             </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
+            <div class="col-lg-3 col-sm-6  col-md-3 text-center">
+               <img class="img-circle img-responsive img-center" src="http://harshthakkar.in/wp-content/uploads/2009/12/Harsh.jpg" alt="" style="width:200px;height:200px;">
+               <h3>Harsh Thakkar
+                  <small>Researcher</small>
+               </h3>
+               <p>Full-time researcher at Informatik III department of University of Bonn, Germany.</p>
+               <p><a href="https://www.linkedin.com/in/thakkarharsh?ppe=1" class="btn btn-primary" role="button">LinkedIn</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Website</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Email</a> </p>
+            </div>
+            <div class="col-lg-3 col-sm-6  col-md-3 text-center">
+               <img class="img-circle img-responsive img-center" src="http://harshthakkar.in/wp-content/uploads/2009/12/Harsh.jpg" alt="" style="width:200px;height:200px;">
+               <h3>Harsh Thakkar
+                  <small>Researcher</small>
+               </h3>
+               <p>Full-time researcher at Informatik III department of University of Bonn, Germany.</p>
+               <p><a href="https://www.linkedin.com/in/thakkarharsh?ppe=1" class="btn btn-primary" role="button">LinkedIn</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Website</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Email</a> </p>
+            </div>
+            <div class="col-lg-3 col-sm-6  col-md-3 text-center">
+               <img class="img-circle img-responsive img-center" src="http://harshthakkar.in/wp-content/uploads/2009/12/Harsh.jpg" alt="" style="width:200px;height:200px;">
+               <h3>Harsh Thakkar
+                  <small>Researcher</small>
+               </h3>
+               <p>Full-time researcher at Informatik III department of University of Bonn, Germany.</p>
+               <p><a href="https://www.linkedin.com/in/thakkarharsh?ppe=1" class="btn btn-primary" role="button">LinkedIn</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Website</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Email</a> </p>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-4 col-md-3">
+               <div class="thumbnail">
+                  <img src="http://harshthakkar.in/wp-content/uploads/2009/12/Harsh.jpg" class="img-rounded" width="304" height="236">
+                  <div class="caption">
+                     <h3>Harsh Thakkar</h3>
+                     <p>I am Harsh V. Thakkar, a full-time Researcher at the Informatik III department of University of Bonn, Germany.  My current research interests are aligned with the EU funded project WDAqua which include Quality assessment of open datasets for Question Answering and Information retrieval. I completed my Post-graduation from National Institute of  Technology Surat [2013].</p>
+                     <p><a href="https://www.linkedin.com/in/thakkarharsh?ppe=1" class="btn btn-primary" role="button">LinkedIn</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Website</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Email</a> </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-4 col-md-3">
+               <div class="thumbnail">
+                  <img src="http://harshthakkar.in/wp-content/uploads/2009/12/Harsh.jpg" class="img-rounded" width="304" height="236">
+                  <div class="caption">
+                     <h3>Harsh Thakkar</h3>
+                     <p>I am Harsh V. Thakkar, a full-time Researcher at the Informatik III department of University of Bonn, Germany.  My current research interests are aligned with the EU funded project WDAqua which include Quality assessment of open datasets for Question Answering and Information retrieval. I completed my Post-graduation from National Institute of  Technology Surat [2013].</p>
+                     <p><a href="https://www.linkedin.com/in/thakkarharsh?ppe=1" class="btn btn-primary" role="button">LinkedIn</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Website</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Email</a> </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-4 col-md-3">
+               <div class="thumbnail">
+                  <img src="http://harshthakkar.in/wp-content/uploads/2009/12/Harsh.jpg" class="img-rounded" width="304" height="236">
+                  <div class="caption">
+                     <h3>Harsh Thakkar</h3>
+                     <p>I am Harsh V. Thakkar, a full-time Researcher at the Informatik III department of University of Bonn, Germany.  My current research interests are aligned with the EU funded project WDAqua which include Quality assessment of open datasets for Question Answering and Information retrieval. I completed my Post-graduation from National Institute of  Technology Surat [2013]. </p>
+                     <p><a href="https://www.linkedin.com/in/thakkarharsh?ppe=1" class="btn btn-primary" role="button">LinkedIn</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Website</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Email</a> </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-4 col-md-3">
+               <div class="thumbnail">
+                  <img src="http://harshthakkar.in/wp-content/uploads/2009/12/Harsh.jpg" class="img-rounded" width="304" height="236">
+                  <div class="caption">
+                     <h3>Harsh Thakkar</h3>
+                     <p>I am Harsh V. Thakkar, a full-time Researcher at the Informatik III department of University of Bonn, Germany.  My current research interests are aligned with the EU funded project WDAqua which include Quality assessment of open datasets for Question Answering and Information retrieval. I completed my Post-graduation from National Institute of  Technology Surat [2013].  </p>
+                     <p><a href="https://www.linkedin.com/in/thakkarharsh?ppe=1" class="btn btn-primary" role="button">LinkedIn</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Website</a> <a href="http://harshthakkar.in/" class="btn btn-primary" role="button">Email</a> </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid bg-2 text-center" id="contact">
+            <br><br>
+            <h2 class="text-center">Contact Us</h2>
+            <br>
             <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; LITMUS (2016)</p>
-                </div>
+               <div class="col-sm-12 col-md-12">
+                  <address>
+                     <strong>Harsh Thakkar</strong>
+                     <br>A110, Informatik III, University of Bonn
+                     <br>Roemerstrasse 164, 53117 Bonn, Germany
+                     <br>
+                  </address>
+                  <address>
+                     <abbr title="Phone">P:</abbr>(+49)-151-4550-1359
+                     <br>
+                     <abbr title="Email">E:</abbr> <a href="mailto:hthakkar@uni-bonn.de?subject=Litmus%20Inquiry">hthakkar[at]uni-bonn.de</a>
+                  </address>
+               </div>
             </div>
-            <!-- /.row -->
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
+         </div>
+      </div>
+      <footer class="bg-2">
+         <div class="row">
+            <div class="col-lg-12 text-center">
+               <p><br>Copyright &copy; LITMUS (2016)</p>
+            </div>
+         </div>
+         <!-- /.row -->
+      </footer>
+      <!-- /.container -->
+      <!-- jQuery -->
+      <script src="js/jquery.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
 </html>

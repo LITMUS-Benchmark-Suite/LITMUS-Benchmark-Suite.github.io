@@ -11,13 +11,41 @@ body {
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
 .business-header {
-    height: 400px;
-    background: url('http://harshthakkar.in/wp-content/uploads/2016/07/litmus_back.png') center center no-repeat scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    height: 100%;
+    width:100%;
 }
+
+.nav-back { 
+    background-color: #474e5d; /* Dark Grey */
+    color: #ffffff;
+}
+
+.bg-2 { 
+    background-color: #474e5d; /* Dark Grey */
+    color: #ffffff;
+}
+
+.bg-4 { 
+    background-color:#1CB3BA; /* Dark Grey */
+    color: #ffffff;
+}
+
+
+
+.bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand
+{
+    color: #ffffff;
+}
+
 
 /* Customize the text color and shadow color and to optimize text legibility. */
 

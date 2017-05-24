@@ -1,4 +1,11 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/)
+# Contents
+1. HTML code in index.html
+2. All images in the images folder.
+3. Fonts in the fonts folder.
+4. Javascript in the js folder.
+5. Css in the css folder.
+
+##[Start Bootstrap](http://startbootstrap.com/) - [Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/)
 
 [Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/) is a basic business website template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
@@ -25,3 +32,26 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License
 
 Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/gh-pages/LICENSE) license.
+
+
+## To add more sections in the page
+1. Add the content (the id of the container is test in this case)
+       <div class="container-fluid bg-2 text-center" id="test" >
+         <h2>header text</h2>
+         <br>
+         Contents
+         <div class="text-center">
+            <p>
+                  Any links
+                     <a class="btn btn-default btn-lg" href="https://hub.docker.com/r/litmusbenchmarksuite/litmus/">Call to Action &raquo;</a>
+            </p>
+            <br>
+         </div>
+      </div>
+
+2. Creating corresponding placeholder in the navbar, link by the id of the contents(test in this case)
+<li>
+    <a href="#test">Test</a>
+</li>
+
+
